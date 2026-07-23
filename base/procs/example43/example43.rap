@@ -1,0 +1,104 @@
+[Project]
+Assembler=masm
+Type=CUI
+Description=example43
+Backup=$P\Bak\
+Group=1
+GroupExpand=1
+[Files]
+1=example43.asm
+2=example43.inc
+3=example43.rc
+4=example43.txt
+[MakeFiles]
+0=example43.rap
+1=example43.rc
+2=example43.asm
+3=example43.obj
+4=example43.res
+5=example43.exe
+6=example43.def
+7=example43.dll
+8=example43.txt
+9=example43.lib
+10=example43.mak
+11=example43.ocx
+12=example43.idl
+13=example43.tlb
+14=example43.sys
+15=example43.pdb
+16=example43.cmd
+17=example43.bat
+18=example43.log
+19=example43.map
+20=example43.sbr
+21=example43.mof
+22=example43.mc
+23=example43.ctl
+24=example43.inc
+25=example43.mac
+26=example43.bmp
+27=example43.ico
+28=example43.cur
+29=example43.dlg
+30=example43.mnu
+[MakeDef]
+Menu=1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0
+1=4,O,$B\rc.exe /I"$I" /V,1
+2=3,O,$B\ml64.exe /c /Cp /Cx /D_WIN64 /D_UNICODE /I"$I" /I"$M" /w,2
+3=5,O,$B\link.exe /ENTRY:main /LIBPATH:"$L" /MACHINE:X64 /OUT:"$5" /RELEASE /SUBSYSTEM:CONSOLE,3,4
+4=0,0,,5
+5=rsrc.obj,O,$B\cvtres.exe,rsrc.res
+6=*.obj,O,$B\ml64.exe /c /Cp /D_WIN64 /D_UNICODE /I"$I" /I"$M",*.asm
+7=0,0,"$E\x64dbg.exe",5
+11=4,O,$B\rc.exe /D_DBG /I"$I" /v,1
+12=3,O,$B\ml64.exe /c /Cp /Cx /D_DBG /D_WIN64 /D_UNICODE /I"$I" /I"$M" /w /Zi /Zd,2
+13=5,O,$B\link.exe /DEBUG /ENTRY:main /LIBPATH:"$L" /MACHINE:X64 /OUT:"$5" /PDB:"$15" /SUBSYSTEM:CONSOLE,3,4
+14=0,0,,5
+15=rsrc.obj,O,$B\cvtres.exe,rsrc.res
+16=*.obj,O,$B\ml64.exe /c /Cp /Cx /D_DBG /D_WIN64 /D_UNICODE /I"$I" /I"$M" /w /Zi /Zd,*.asm
+17=0,0,"$E\x64dbg.exe",5
+[Resource]
+[StringTable]
+[Accel]
+[VerInf]
+[Group]
+Group=Анотація,Вихідний текст,Заголовки і макроси,Ресурси,Сценарії,Усі інші
+1=2
+2=3
+3=4
+4=1
+5=3
+6=5
+[AutoLoad]
+AutoLoad=1
+[Colref]
+0=00FFFFFF
+1=00FFFFFF
+2=00FFFFFF
+3=00FFFFFF
+4=00FFFFFF
+5=00FFFFFF
+6=00FFFFFF
+7=00FFFFFF
+[PTimer]
+PTimer=13879702
+[Collapse]
+1=
+[Size]
+1=0,0,0,0,1009
+[GroupExpand]
+GroupExpand=1,1,1,1,0,0,0
+[BookMark]
+0=
+1=
+2=
+3=
+4=
+5=
+6=
+7=
+8=
+9=
+[BreakPoint]
+0=

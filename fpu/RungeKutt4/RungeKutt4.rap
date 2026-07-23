@@ -1,0 +1,113 @@
+[Project]
+Assembler=masm
+Type=CUI
+Description=Метод Рунге — Кутта 4-го порядку
+Backup=$P\Bak\
+Group=1
+GroupExpand=1
+Debug=1
+[Files]
+1=RungeKutt4.asm
+2=RungeKutt4.inc
+3=RungeKutt4.rc
+4=RungeKutt4.txt
+[MakeFiles]
+0=RungeKutt4.rap
+1=RungeKutt4.rc
+2=RungeKutt4.asm
+3=RungeKutt4.obj
+4=RungeKutt4.res
+5=RungeKutt4.exe
+6=RungeKutt4.def
+7=RungeKutt4.dll
+8=RungeKutt4.txt
+9=RungeKutt4.lib
+10=RungeKutt4.mak
+11=RungeKutt4.ocx
+12=RungeKutt4.idl
+13=RungeKutt4.tlb
+14=RungeKutt4.sys
+15=RungeKutt4.pdb
+16=RungeKutt4.cmd
+17=RungeKutt4.bat
+18=RungeKutt4.log
+19=RungeKutt4.map
+20=RungeKutt4.sbr
+21=RungeKutt4.mof
+22=RungeKutt4.mc
+23=RungeKutt4.ctl
+24=RungeKutt4.inc
+25=RungeKutt4.mac
+26=RungeKutt4.bmp
+27=RungeKutt4.ico
+28=RungeKutt4.cur
+29=RungeKutt4.dlg
+30=RungeKutt4.mnu
+[MakeDef]
+Menu=1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0
+1=4,O,$B\rc.exe /I"$I" /I"$M" /V,1
+2=3,O,$B\ml64.exe /c /Cp /Cx /D_WIN64 /D_UNICODE /I"$I" /I"$M" /w,2
+3=5,O,$B\link.exe /ENTRY:main /LARGEADDRESSAWARE:NO /LIBPATH:"$L" /MACHINE:X64 /OUT:"$5" /RELEASE /SUBSYSTEM:CONSOLE,3,4
+4=0,0,,5
+5=rsrc.obj,O,$B\cvtres.exe,rsrc.res
+6=*.obj,O,$B\ml64.exe /c /Cp /D_WIN64 /D_UNICODE /I"$I" /I"macros64",*.asm
+7=0,0,"$E\x64dbg.exe",5
+11=4,O,$B\rc.exe /D_DBG /I"$I" /I"$M" /v,1
+12=3,O,$B\ml64.exe /c /Cp /Cx /D_DBG /D_WIN64 /D_UNICODE /Fl /I"$I" /I"$M" /w /Zi /Zd,2
+13=5,O,$B\link.exe /DEBUG /ENTRY:main /LARGEADDRESSAWARE:NO /LIBPATH:"$L" /MACHINE:X64 /OUT:"$5" /PDB:"$15" /SUBSYSTEM:CONSOLE,3,4
+14=0,0,,5
+15=rsrc.obj,O,$B\cvtres.exe,rsrc.res
+16=*.obj,O,$B\ml64.exe /c /Cp /Cx /D_DBG /D_WIN64 /D_UNICODE /I"$I" /I"macros64" /w /Zi /Zd,*.asm
+17=0,0,"$E\x64dbg.exe",5
+[Resource]
+[StringTable]
+[Accel]
+[VerInf]
+[Group]
+Group=Анотація,Вихідний текст,Заголовки і макроси,Ресурси,Сценарії,Усі інші
+1=2
+2=3
+3=4
+4=1
+5=3
+6=5
+[AutoLoad]
+AutoLoad=1,2,3,4
+[Colref]
+0=00FFFFFF
+1=00FFFFFF
+2=00FFFFFF
+3=00FFFFFF
+4=00FFFFFF
+5=00FFFFFF
+6=00FFFFFF
+7=00FFFFFF
+[PTimer]
+PTimer=10096390
+[Collapse]
+3=
+4=
+2=
+1=
+[Size]
+3=0,0,0,0,0
+4=0,0,0,0,0
+2=0,0,0,0,27
+1=0,0,0,0,2672
+[GroupExpand]
+GroupExpand=1,1,1,1,0,0,0
+[BookMark]
+0=
+1=
+2=
+3=
+4=
+5=
+6=
+7=
+8=
+9=
+[BreakPoint]
+0=
+[Find]
+1=

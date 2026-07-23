@@ -1,0 +1,105 @@
+[Project]
+Assembler=masm
+Type=CUI
+Description=example32
+Backup=$P\Bak\
+Group=1
+GroupExpand=1
+[Files]
+1=example32.asm
+2=example32.inc
+3=example32.rc
+4=example32.txt
+[MakeFiles]
+0=example32.rap
+1=example32.rc
+2=example32.asm
+3=example32.obj
+4=example32.res
+5=example32.exe
+6=example32.def
+7=example32.dll
+8=example32.lib
+9=example32.rsp
+10=example32.sys
+11=example32.idl
+12=example32.rgs
+13=example32.tlb
+14=example32.ocx
+15=example32.inf
+16=example32.mof
+17=example32.mc
+18=example32.ctl
+19=example32.txt
+20=example32.mak
+21=example32.cmd
+22=example32.pdb
+23=example32.map
+24=example32.sbr
+25=example32.log
+[MakeDef]
+Menu=1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0
+1=4,O,$B\RC.EXE /I"$I" /V,1
+2=3,O,$B\ML64.EXE -c -Cp -DUNICODE -D_WIN64 -I"$I",2
+3=5,O,$B\LINK.EXE /DEFAULTLIB:kernel32.lib /ENTRY:main /LIBPATH:"$L" /MACHINE:X64 /OPT:REF /RELEASE /SUBSYSTEM:CONSOLE,3,4
+4=0,0,,5
+5=rsrc.obj,O,$B\CVTRES.EXE,rsrc.res
+6=*.obj,O,$B\ML64.EXE -c -Cp -I"$I",*.asm
+7=0,0,$E\x64dbg.exe,5
+11=4,O,$B\RC.EXE /V /D_DBG /I"$I",1
+12=3,O,$B\ML64.EXE -c -Cp -Fm -FR -Sa -Zd -Zi -Zf -D_DBG -DUNICODE -D_WIN64 -I"$I",2
+13=5,O,$B\LINK.EXE /DEBUG /DEFAULTLIB:kernel32.lib /ENTRY:main /LIBPATH:"$L" /MACHINE:X64 /MAP /MAPINFO:EXPORTS /OPT:NOREF /SUBSYSTEM:CONSOLE /VERBOSE,3,4
+14=0,0,,5
+15=rsrc.obj,O,$B\CVTRES.EXE,rsrc.res
+16=*.obj,O,$B\ML64.EXE -c -Cp -I"$I",*.asm
+17=0,0,$E\x64dbg.exe,5
+[Resource]
+[StringTable]
+[Accel]
+[VerInf]
+[Group]
+Group=Анотація,Вихідний текст,Заголовки,Ресурси
+1=2
+2=3
+3=4
+4=1
+[AutoLoad]
+AutoLoad=1,2,3,4
+[RADebugBP]
+1=
+[Colref]
+0=00FFFFFF
+1=00FFFFFF
+2=00FFFFFF
+3=00FFFFFF
+4=00FFFFFF
+5=00FFFFFF
+6=00FFFFFF
+7=00FFFFFF
+[PTimer]
+PTimer=19050094
+[Collapse]
+4=
+1=
+3=
+2=
+[Size]
+4=0,0,0,0,96
+1=0,0,0,0,321
+3=0,0,0,0,20
+2=0,0,0,0,0
+[GroupExpand]
+GroupExpand=1,1,1,1,0
+[BookMark]
+0=
+1=
+2=
+3=
+4=
+5=
+6=
+7=
+8=
+9=
+[BreakPoint]
+0=
